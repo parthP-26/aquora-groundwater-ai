@@ -1,0 +1,7 @@
+version: 1.0.0
+required: [alert_id, location_id, observation_date, alert_level]
+fields:
+  alert_id: {type: string, nullable: false}
+  location_id: {type: string, nullable: false}
+  observation_date: {type: string, format: date, nullable: false}
+  alert_level: {type: string, enum: [none, watch, warning, critical], nullable: false}

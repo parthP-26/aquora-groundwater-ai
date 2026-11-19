@@ -1,0 +1,12 @@
+version: 1.0.0
+location_id: station_name
+observation_date: date
+artifacts:
+  cleaned_data: ../member-1-data-engineering/data/processed/cleaned_groundwater_data.csv
+  modeling_data: ../member-1-data-engineering/data/processed/modeling_dataset.csv
+  predictions: ../member-2-groundwater-prediction/reports/predictions.csv
+  alerts: ../member-3-water-stress-alerts/reports/alerts.csv
+*** Add File: ai-groundwater-early-warning-integration/docs/limitations.md
+# Limitations
+
+This prototype is limited to station locations present in the supplied Jaipur dataset. It has no rainfall, abstraction, recharge, aquifer, or administrative-boundary covariates. The temporal history is short and irregular/semiannual, so performance and uncertainty must be evaluated after training before operational use. Stress thresholds are project-defined data quantiles, not government thresholds. Missing dependencies prevented execution in the delivery environment; no model metrics or dashboard values are precomputed.

@@ -1,0 +1,10 @@
+version: 1.0.0
+entity: observation
+required: [location_id, observation_date, groundwater_level]
+fields:
+  location_id: {type: string, description: Station identifier, nullable: false}
+  observation_date: {type: string, format: date, description: ISO-8601 observation date, nullable: false}
+  groundwater_level: {type: number, units: dataset units, nullable: false}
+  latitude: {type: number, units: decimal_degrees, nullable: true}
+  longitude: {type: number, units: decimal_degrees, nullable: true}
+example: {location_id: RJGW_4532, observation_date: '2014-05-24', groundwater_level: 36.52, latitude: 26.75159, longitude: 75.85939}

@@ -1,0 +1,6 @@
+version: 1.0.0
+required: [location_id, observation_date, anomaly_score]
+fields:
+  location_id: {type: string, nullable: false}
+  observation_date: {type: string, format: date, nullable: false}
+  anomaly_score: {type: number, nullable: false}

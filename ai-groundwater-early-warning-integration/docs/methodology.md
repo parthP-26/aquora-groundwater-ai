@@ -1,0 +1,3 @@
+# Methodology
+
+The preprocessing pipeline parses dates, validates required fields and coordinate ranges, removes only rows lacking required values or exact duplicates, and records that count. Features are station-specific lag one, prior rolling mean, sequence position, year, and month; all lagged values use prior observations only. Forecasting uses chronological train/test splitting, persistence, Ridge, and Random Forest candidates. Stress classes are explicitly project-defined groundwater-level quantiles. Isolation Forest flags unusual feature combinations; alert rules combine project stress category and anomaly flag. SHAP, when a fitted model is available, explains model contribution associations, not causality. Map points are the actual station latitude/longitude.

@@ -1,0 +1,6 @@
+version: 1.0.0
+required: [prediction_id, model_version, feature_contributions]
+fields:
+  prediction_id: {type: string, nullable: false}
+  model_version: {type: string, nullable: false}
+  feature_contributions: {type: object, nullable: false}
